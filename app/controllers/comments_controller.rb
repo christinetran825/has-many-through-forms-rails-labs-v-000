@@ -5,13 +5,6 @@ class CommentsController < ApplicationController
     redirect_to comment.post
   end
 
-  def user_attributes=(user_attributes)
-    user_attributes.values.each do |user_attribute|
-      user = User.find_or_create_by(user_attribute)
-      self.users << user
-    end
-  end
-
 
   private
 
