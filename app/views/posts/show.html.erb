@@ -27,8 +27,10 @@ See Post
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.label :username %>
   <%= f.collection_check_boxes :user_ids, User.all, :id, :username, include_blank: true %>
-  <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
-    <%= categories_fields.text_field :name %>
-  <% end %>
+  <br>
+  <%= f.label :new_user %>
+  <%= f.fields_for :user, @post.users.build do |user_field| %>
+    <%=  %>
+
   <%= f.submit %>
 <% end %>
