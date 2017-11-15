@@ -4,6 +4,13 @@ See Post
 
 <p><%= @post.content %></p>
 
+<h4>Categories:</h4>
+
+<% @post.categories.each do |category| %>
+  <p><%= category.name %></p>
+<% end %>
+
+
 <h4>Comments:</h4>
 
 <% @post.comments.each do |comment| %>
