@@ -11,5 +11,12 @@ class Comment < ActiveRecord::Base
     end
   end
 
+  def post_title
+    self.post.title
+  end
+
+  def user_name
+    self.user.username
+  end
 
 end
