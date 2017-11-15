@@ -10,9 +10,14 @@ See Post
   <p><%= category.name %></p>
 <% end %>
 
-
 <h4>Comments:</h4>
 
 <% @post.comments.each do |comment| %>
   <p><%= @comment.user_name %> : <%= comment.content %></p>
+<% end %>
+
+<h4>Comments by:</h4>
+
+<% @post.unique_users.each do |user| %>
+  <p><%= link_to user.username, user%></p>
 <% end %>
