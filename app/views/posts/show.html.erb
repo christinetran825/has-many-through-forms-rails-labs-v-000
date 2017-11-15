@@ -10,10 +10,11 @@ See Post
 <% end %>
 
 <h4>Comments:</h4>
-
-<% @post.comments.each do |comment| %>
-  <p><%= @comment.user_name %> : <%= comment.content %></p>
-<% end %>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li><%= @comment.user_name %> : <%= comment.content %></li>
+  <% end %>
+</ul>
 
 <h4>Comments by:</h4>
 
