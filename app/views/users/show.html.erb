@@ -1,5 +1,7 @@
-<h2><%= @user.username  %></h2>
+<h2><%= @user.username %></h2>
 
-<% @user.comments.each do |comment| %>
-  <p><%= link_to comment.post_title, comment.post %></p>
-<% end %>
+<ul>
+  <% @user.comments.each do |comment| %>
+    <li><%= link_to comment.post_title, comment.post %></li>
+  <% end %>
+</ul>
