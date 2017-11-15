@@ -30,7 +30,8 @@ See Post
   <br>
   <%= f.label :new_user %>
   <%= f.fields_for :user, @post.users.build do |user_field| %>
-    <%=  %>
+    <%= user_field.text_field :username %>
+  <% end %>
 
   <%= f.submit %>
 <% end %>
