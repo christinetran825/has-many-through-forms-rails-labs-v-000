@@ -1,7 +1,9 @@
 All related posts
 
-<h1><%= @category.name  %></h1>
+<h1><%= @category.name %></h1>
 
-<% @category.posts.each do |post| %>
-  <p><%= link_to post.title, post %></p>
-<% end %>
+<ul>
+  <% @category.posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+  <% end %>
+</ul>
