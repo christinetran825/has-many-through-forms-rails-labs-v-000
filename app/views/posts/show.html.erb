@@ -23,3 +23,12 @@ See Post
 <% end %>
 
 <h4>Leave a Comment</h4>
+<%= form_for @post.comments.build do |f| %>
+<%= f.hidden_field :post_id, value: @post.id %>
+  <%= f.label :username %>
+  <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  <%= f.fields_for :categories, post.categories.build do |categories_fields| %>
+    <%= categories_fields.text_field :name %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
