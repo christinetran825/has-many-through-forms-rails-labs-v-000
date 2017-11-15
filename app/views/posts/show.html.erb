@@ -23,7 +23,7 @@ See Post
   <% end %>
 </ul>
 
-<h4>Leave a Comment</h4>
+<h4>Add a Comment:</h4>
 <%= form_for @post.comments.build do |f| %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.label :username %>
