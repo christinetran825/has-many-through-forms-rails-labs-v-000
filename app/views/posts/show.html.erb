@@ -31,8 +31,8 @@ See Post
   <%= f.collection_select :user_id, User.all, :id, :username, include_blank: true %>
   <br>
   <%= f.label :new_user %>
-  <%= f.fields_for :user, @post.users.build do |user_field| %>
-    <%= user_field.text_field :username %>
+  <%= f.fields_for :user, @post.users.build do |user_info| %>
+    <%= user_info.text_field :username %>
   <% end %>
 
   <%= f.label :content %>
