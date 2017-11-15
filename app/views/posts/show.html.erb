@@ -27,7 +27,7 @@ See Post
 <%= form_for @post.comments.build do |f| %>
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.label :username %>
-  <%= f.collection_check_boxes :user_ids, User.all, :id, :username, include_blank: true %>
+  <%= f.collection_check_boxes :user_id, User.all, :id, :username, include_blank: true %>
   <br>
   <%= f.label :new_user %>
   <%= f.fields_for :user, @post.users.build do |user_field| %>
